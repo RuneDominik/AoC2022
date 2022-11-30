@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Rune compiler files 
-.ll
+*.ll
