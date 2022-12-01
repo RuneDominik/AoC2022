@@ -20,7 +20,7 @@ pub fn get_max_calories(path: impl AsRef<Path>) -> Result<i64, Error> {
 
     let max_cal: i64 = *calories.iter().max().unwrap();
 
-    return Ok(max_cal);
+    Ok(max_cal)
 }
 
 
@@ -41,5 +41,5 @@ pub fn get_top3_calories(path: impl AsRef<Path>) -> Result<i64, Error> {
 
     let top3_cal: i64 = calories.iter().sum();
 
-    return Ok(top3_cal);
+    Ok(top3_cal)
 }

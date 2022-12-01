@@ -18,5 +18,5 @@ pub fn get_msg(path: impl AsRef<Path>) -> Result<String, Error> {
         .unwrap();
 
 
-    return Ok(msg);
+    Ok(msg)
 }
