@@ -14,7 +14,7 @@ pub fn get_max_calories(path: impl AsRef<Path>) -> Result<i64, Error> {
 
     let inp: Vec<i64> = br.lines().map(|x| x.unwrap().parse::<i64>().unwrap_or(-1)).collect::<Vec<_>>();
 
-    let iter = inp.rsplit(|num| *num == -1);//.sum::<i64>().collect::<Vec<_>>();
+    let iter = inp.rsplit(|num| *num == -1);
 
     let calories: Vec<i64> = iter.map(|num| num.iter().sum::<i64>()).collect::<Vec<_>>();
 
@@ -31,7 +31,7 @@ pub fn get_top3_calories(path: impl AsRef<Path>) -> Result<i64, Error> {
 
     let inp: Vec<i64> = br.lines().map(|x| x.unwrap().parse::<i64>().unwrap_or(-1)).collect::<Vec<_>>();
 
-    let iter = inp.rsplit(|num| *num == -1);//.sum::<i64>().collect::<Vec<_>>();
+    let iter = inp.rsplit(|num| *num == -1);
 
     let mut calories: Vec<i64> = iter.map(|num| num.iter().sum::<i64>()).collect::<Vec<_>>();
 
