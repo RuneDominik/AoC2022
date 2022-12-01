@@ -1,6 +1,8 @@
 mod helloworld;
+mod elf;
 
 use crate::helloworld::io;
+use crate::elf::calories;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -8,6 +10,11 @@ fn main() {
     println!("Let us start this AoC with a happy {}", msg);
 
     println!("=================== Day 1 ===================");
+    let max_cal = calories::get_max_calories("data/day1_data/data.txt").unwrap();
+    println!("One elf has {} calories.", max_cal);
+
+    let top3_cal = calories::get_top3_calories("data/day1_data/data.txt").unwrap();
+    println!("One top three elves have {} calories.", top3_cal);
 
     println!("=================== Day 2 ===================");
 
