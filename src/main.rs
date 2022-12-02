@@ -3,6 +3,7 @@ mod elf;
 
 use crate::helloworld::io;
 use crate::elf::calories;
+use crate::elf::camp;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -17,6 +18,8 @@ fn main() {
     println!("One top three elves have {} calories.", top3_cal);
 
     println!("=================== Day 2 ===================");
+    let score = camp::get_rps_score("data/day2_data/data.txt").unwrap();
+    println!("The total score is {}.", score);
 
     println!("=================== Day 3 ===================");
 

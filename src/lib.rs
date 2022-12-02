@@ -27,4 +27,15 @@ mod elf_tests {
 
         assert_eq!(top3_calories, 45000);
     }
+    fn test_camp() {
+        use crate::elf::camp;
+
+        let score = camp::get_rps_score("data/day2_data/test_data.txt").unwrap();
+
+        assert_eq!(score, 15);
+
+        //let top3_calories = calories::get_top3_calories("data/day1_data/test_data.txt").unwrap();
+
+        //assert_eq!(top3_calories, 45000);
+    }
 }
