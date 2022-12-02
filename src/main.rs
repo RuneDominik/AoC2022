@@ -21,6 +21,9 @@ fn main() {
     let score = camp::get_rps_score("data/day2_data/data.txt").unwrap();
     println!("The total score is {}.", score);
 
+    let score_corr = camp::get_rps_score_corrected("data/day2_data/data.txt").unwrap();
+    println!("With the correct strategy guide, the total score is {}.", score_corr);
+
     println!("=================== Day 3 ===================");
 
     println!("=================== Day 4 ===================");
