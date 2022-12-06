@@ -55,8 +55,12 @@ mod elf_tests {
     fn test_cleanup() {
         use crate::elf::cleanup;
 
-        let pairs = cleanup::get_n_pairs("data/day4_data/test_data.txt").unwrap();
+        let matching_pairs = cleanup::get_n_matching_pairs("data/day4_data/test_data.txt").unwrap();
 
-        assert_eq!(pairs, 2);
+        assert_eq!(matching_pairs, 2);
+
+        let overlapping_pairs = cleanup::get_n_overlapping_pairs("data/day4_data/test_data.txt").unwrap();
+
+        assert_eq!(overlapping_pairs, 4);
     }
 }
