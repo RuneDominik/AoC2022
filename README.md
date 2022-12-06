@@ -6,7 +6,7 @@ My Solutions to the [Advent of Code 2022](https://adventofcode.com/)
 This year I'm using Rust, since Rune does not seem to support file i/o yet. Much sad :(
 
 ## Some remarks on my solutions:
-(just what I thought I should do better but didn't bothered to implement after havin a running skript)
+(Just what I thought I should do better but didn't bothered to implement after having a running skript)
 
 ### Day 1:
 I solved this by chaining iterators and using build-in functions to manipulate the input as needed. Since I'm iterating over the whole input or manipulates versions of it multiple times, this could speed up by combining the actions and thus minimizing the amount of needed iterations. For part 2 I even used a sorting algorithm to find the three elves with the most calories. Speeding this up should be simple as one iteration would suffice when you simply remember the three highest entries.
