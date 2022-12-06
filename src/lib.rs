@@ -63,4 +63,16 @@ mod elf_tests {
 
         assert_eq!(overlapping_pairs, 4);
     }
+    #[test]
+    fn test_comms() {
+        use crate::elf::comms;
+
+        let n_processed_characters = comms::get_n_processed_characters_packet("data/day6_data/test_data.txt").unwrap();
+
+        assert_eq!(n_processed_characters, 11);
+
+        let n_processed_characters = comms::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
+
+        assert_eq!(n_processed_characters, 26);
+    }
 }

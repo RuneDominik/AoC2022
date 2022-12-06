@@ -6,6 +6,7 @@ use crate::elf::calories;
 use crate::elf::camp;
 use crate::elf::rucksacks;
 use crate::elf::cleanup;
+use crate::elf::comms;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -43,6 +44,11 @@ fn main() {
     println!("=================== Day 5 ===================");
 
     println!("=================== Day 6 ===================");
+    let n_processed_characters_packet = comms::get_n_processed_characters_packet("data/day6_data/data.txt").unwrap();
+    println!("There are {} characters that needed to be processed for a package.", n_processed_characters_packet);
+
+    let n_processed_characters_msg = comms::get_n_processed_characters_msg("data/day6_data/data.txt").unwrap();
+    println!("There are {} characters that needed to be processed for a message.", n_processed_characters_msg);
 
     println!("=================== Day 7 ===================");
 
