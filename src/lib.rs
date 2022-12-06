@@ -49,6 +49,6 @@ mod elf_tests {
 
         let sticker_priorities = rucksacks::get_sticker_priorities("data/day3_data/test_data.txt").unwrap();
 
-        assert_eq!(corr_score, 70);
+        assert_eq!(sticker_priorities, 70);
     }
 }
