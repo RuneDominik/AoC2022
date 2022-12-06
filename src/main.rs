@@ -5,6 +5,7 @@ use crate::helloworld::io;
 use crate::elf::calories;
 use crate::elf::camp;
 use crate::elf::rucksacks;
+use crate::elf::cleanup;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -33,6 +34,8 @@ fn main() {
     println!("The sticker priority sum is {}.", sticker_priorities);
 
     println!("=================== Day 4 ===================");
+    let n_pairs = cleanup::get_n_pairs("data/day4_data/data.txt").unwrap();
+    println!("There are {} pairs that need immediate reassignment.", n_pairs);
 
     println!("=================== Day 5 ===================");
 

@@ -51,4 +51,12 @@ mod elf_tests {
 
         assert_eq!(sticker_priorities, 70);
     }
+    #[test]
+    fn test_cleanup() {
+        use crate::elf::cleanup;
+
+        let pairs = cleanup::get_n_pairs("data/day4_data/test_data.txt").unwrap();
+
+        assert_eq!(pairs, 2);
+    }
 }
