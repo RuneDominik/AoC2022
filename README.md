@@ -13,5 +13,11 @@ I solved this by chaining iterators and using build-in functions to manipulate t
 ### Day 2:
 This could have been solved in many fascinating ways. I choose not to do so and simply parsed and mapped the input to the corresponding output. Works fine but would hardly be maintainable if one chooses to include more moves, maybe for a quick tournament of [Rock-Paper-Scissors-25](https://umop.com/rps25.htm)?
 
+### Day 3:
+Maybe regroup the input stream in part 2 directly when reading it would be nicer so this could just be parsed compleatly to `map_three_rucksacks`, otherwise this looks good to me performance-wise.
+
+### Day 4:
+This has been straight-forward. Some dtypes are needlessly big, but I didn't felt like converting them in the end.
+
 ## Please note:
 This README contains links to external resources, for whose content I'm neither responsible nor liable. Click at your own risk.
