@@ -17,7 +17,7 @@ This could have been solved in many fascinating ways. I choose not to do so and 
 Maybe regroup the input stream in part 2 directly when reading it would be nicer so this could just be parsed compleatly to `map_three_rucksacks`, otherwise this looks good to me performance-wise.
 
 ### Day 4:
-This has been straight-forward.
+This has been straight-forward. Some dtypes are needlessly big, but I didn't felt like converting them in the end.
 
 ## Please note:
 This README contains links to external resources, for whose content I'm neither responsible nor liable. Click at your own risk.
