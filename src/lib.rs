@@ -43,12 +43,12 @@ mod elf_tests {
     fn test_rucksacks() {
         use crate::elf::rucksacks;
 
-        let priorities = camp::get_priorities("data/day3_data/test_data.txt").unwrap();
+        let priorities = rucksacks::get_priorities("data/day3_data/test_data.txt").unwrap();
 
         assert_eq!(priorities, 157);
 
-        //let corr_score = camp::get_rps_score_corrected("data/day2_data/test_data.txt").unwrap();
+        let sticker_priorities = rucksacks::get_sticker_priorities("data/day3_data/test_data.txt").unwrap();
 
-        //assert_eq!(corr_score, 12);
+        assert_eq!(corr_score, 70);
     }
 }

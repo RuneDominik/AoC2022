@@ -29,8 +29,8 @@ fn main() {
     let priorities = rucksacks::get_priorities("data/day3_data/data.txt").unwrap();
     println!("The priority sum is {}.", priorities);
 
-    //let score_corr = rucksacks::get("data/day3_data/data.txt").unwrap();
-    //println!("With the correct strategy guide, the total score is {}.", score_corr);
+    let sticker_priorities = rucksacks::get_sticker_priorities("data/day3_data/data.txt").unwrap();
+    println!("The sticker priority sum is {}.", sticker_priorities);
 
     println!("=================== Day 4 ===================");
 
