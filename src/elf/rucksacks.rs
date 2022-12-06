@@ -27,7 +27,19 @@ fn map_rucksack(inp: &str) -> Result<u64, Error> {
 
     for c in first.chars() {
         if last.find(c).is_some() {
-            return map_item(c) // minus 10 as to_digit converts 0..9 to int(0..9) first
+            return map_item(c)
+        }
+    }
+
+    Err(unrec_error)
+}
+
+fn map_three_rucksacks(r1: &str, r2: &str, r3: &str) -> Result<u64, Error> {
+    let unrec_error = Error::new(ErrorKind::Other, "No doubled items!");
+
+    for c in r1.chars() {
+        if r2.find(c).is_some() && r3.find(c).is_some() {
+            return map_item(c)
         }
     }
 
@@ -41,7 +53,33 @@ pub fn get_priorities(path: impl AsRef<Path>) -> Result<u64, Error> {
 
     let priorities: Vec<u64> = br.lines().map(|x| map_rucksack(&x.unwrap()).unwrap()).collect::<Vec<_>>();
 
-    let rps_score: u64 = priorities.iter().sum();
+    let prio_score: u64 = priorities.iter().sum();
 
-    Ok(rps_score)
+    Ok(prio_score)
+}
+
+pub fn get_sticker_priorities(path: impl AsRef<Path>) -> Result<u64, Error> {
+    let file = File::open(path)?;
+
+    let br = BufReader::new(file);
+
+    let mut rucksacks = br.lines();
+
+    let mut shared_sticker = Vec::new();
+
+    loop {
+        let r1 = rucksacks.next();
+        if r1.is_none(){
+            break;
+        }
+
+        let r2 = rucksacks.next().unwrap().unwrap();
+        let r3 = rucksacks.next().unwrap().unwrap();
+
+        shared_sticker.push(map_three_rucksacks(&r1.unwrap().unwrap(), &r2, &r3).unwrap());
+    }
+
+    let prio_score: u64 = shared_sticker.iter().sum();
+
+    Ok(prio_score)
 }
