@@ -4,6 +4,7 @@ mod elf;
 use crate::helloworld::io;
 use crate::elf::calories;
 use crate::elf::camp;
+use crate::elf::rucksacks;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -25,6 +26,11 @@ fn main() {
     println!("With the correct strategy guide, the total score is {}.", score_corr);
 
     println!("=================== Day 3 ===================");
+    let priorities = rucksacks::get_priorities("data/day3_data/data.txt").unwrap();
+    println!("The priority sum is {}.", priorities);
+
+    //let score_corr = rucksacks::get("data/day3_data/data.txt").unwrap();
+    //println!("With the correct strategy guide, the total score is {}.", score_corr);
 
     println!("=================== Day 4 ===================");
 

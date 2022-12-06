@@ -39,4 +39,16 @@ mod elf_tests {
 
         assert_eq!(corr_score, 12);
     }
+    #[test]
+    fn test_rucksacks() {
+        use crate::elf::rucksacks;
+
+        let priorities = camp::get_priorities("data/day3_data/test_data.txt").unwrap();
+
+        assert_eq!(priorities, 157);
+
+        //let corr_score = camp::get_rps_score_corrected("data/day2_data/test_data.txt").unwrap();
+
+        //assert_eq!(corr_score, 12);
+    }
 }
