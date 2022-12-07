@@ -70,7 +70,7 @@ mod elf_tests {
 #[cfg(test)]
 mod comms_tests {
     #[test]
-    fn test_comms() {
+    fn test_msg() {
         use crate::comms::msg;
 
         let n_processed_characters = msg::get_n_processed_characters_packet("data/day6_data/test_data.txt").unwrap();
@@ -80,5 +80,17 @@ mod comms_tests {
         let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
     
         assert_eq!(n_processed_characters, 26);
+    }
+    #[test]
+    fn test_dirs() {
+        use crate::comms::dirs;
+
+        let size_at_most = dirs::get_size_at_most("data/day7_data/test_data.txt").unwrap();
+
+        assert_eq!(size_at_most, 95437);
+
+        //let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
+    
+        //assert_eq!(n_processed_characters, 26);
     }
 }
