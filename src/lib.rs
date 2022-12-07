@@ -1,5 +1,6 @@
 mod helloworld;
 mod elf;
+mod comms;
 
 #[cfg(test)]
 mod helloworld_tests {
@@ -63,16 +64,21 @@ mod elf_tests {
 
         assert_eq!(overlapping_pairs, 4);
     }
+}
+
+
+#[cfg(test)]
+mod comms_tests {
     #[test]
     fn test_comms() {
-        use crate::elf::comms;
+        use crate::comms::msg;
 
-        let n_processed_characters = comms::get_n_processed_characters_packet("data/day6_data/test_data.txt").unwrap();
+        let n_processed_characters = msg::get_n_processed_characters_packet("data/day6_data/test_data.txt").unwrap();
 
         assert_eq!(n_processed_characters, 11);
 
-        let n_processed_characters = comms::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
-
+        let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
+    
         assert_eq!(n_processed_characters, 26);
     }
 }
