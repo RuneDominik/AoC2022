@@ -105,5 +105,9 @@ mod fauna_tests {
         let n_visible = trees::get_n_visible("data/day8_data/test_data.txt").unwrap();
 
         assert_eq!(n_visible, 21);
+
+        let scenic_score = trees::get_scenic_score("data/day8_data/test_data.txt").unwrap();
+
+        assert_eq!(scenic_score, 8);
     }
 }

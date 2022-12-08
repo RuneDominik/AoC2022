@@ -59,6 +59,9 @@ fn main() {
     let n_visible = trees::get_n_visible("data/day8_data/data.txt").unwrap();
     println!("There are {} trees visible.", n_visible);
 
+    let scenic_score = trees::get_scenic_score("data/day8_data/data.txt").unwrap();
+    println!("There is a spot with a scenic score of {}.", scenic_score);
+
     println!("=================== Day 9 ===================");
 
     println!("=================== Day 10 ===================");

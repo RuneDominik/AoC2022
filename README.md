@@ -30,7 +30,7 @@ Quite hard-coded, quite the code dublication. Just introducing a variable indica
 Let us not talk about it, ok? I really tried to implement a tree with pointers and everything, but Rust is a tad annoying if more then one mutable pointer points towards the same object. I guess my solution is quite close to right (at least for the first part of the day), but I'm missing something. Maybe hide everything in `RefCells` or write functions that pass every `register_xyz` down through the whole directory structure? One way or another, not so pretty. Anyway, feel free to take a look at [my solution](https://github.com/RuneDominik/AoC2022/tree/main/src/comms/dir.rs), although it does not (yet) work.
 
 ### Day 8:
-Solved part one by recursion. Bit of code-doubling (one function for each direction) but works. Although because of recursion and testing each and every tree this might not scale too good.
+Solved both parts by recursion. Bit of code-doubling (one function for each direction) but works. Although because of recursion and testing each and every tree this might not scale too good.
 
 ## Please note:
 This README contains links to external resources, for whose content I'm neither responsible nor liable. Click at your own risk.
