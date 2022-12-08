@@ -1,6 +1,7 @@
 mod helloworld;
 mod elf;
 mod comms;
+mod fauna;
 
 use crate::helloworld::io;
 use crate::elf::calories;
@@ -8,6 +9,7 @@ use crate::elf::camp;
 use crate::elf::rucksacks;
 use crate::elf::cleanup;
 use crate::comms::msg;
+use crate::fauna::trees;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -54,6 +56,8 @@ fn main() {
     println!("=================== Day 7 ===================");
 
     println!("=================== Day 8 ===================");
+    let n_visible = trees::get_n_visible("data/day8_data/data.txt").unwrap();
+    println!("There are {} trees visible.", n_visible);
 
     println!("=================== Day 9 ===================");
 

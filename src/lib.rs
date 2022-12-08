@@ -1,6 +1,7 @@
 mod helloworld;
 mod elf;
 mod comms;
+mod fauna;
 
 #[cfg(test)]
 mod helloworld_tests {
@@ -81,16 +82,28 @@ mod comms_tests {
     
         assert_eq!(n_processed_characters, 26);
     }
-    #[test]
-    fn test_dirs() {
-        use crate::comms::dirs;
+    //#[test]
+    //fn test_dirs() {
+    //    use crate::comms::dirs;
 
-        let size_at_most = dirs::get_size_at_most("data/day7_data/test_data.txt").unwrap();
+    //    let size_at_most = dirs::get_size_at_most("data/day7_data/test_data.txt").unwrap();
 
-        assert_eq!(size_at_most, 95437);
+    //    assert_eq!(size_at_most, 95437);
 
         //let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
     
         //assert_eq!(n_processed_characters, 26);
+    //}
+}
+
+#[cfg(test)]
+mod fauna_tests {
+    #[test]
+    fn test_trees() {
+        use crate::fauna::trees;
+
+        let n_visible = trees::get_n_visible("data/day8_data/test_data.txt").unwrap();
+
+        assert_eq!(n_visible, 21);
     }
 }
