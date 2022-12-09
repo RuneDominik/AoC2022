@@ -32,7 +32,7 @@ Let us not talk about it, ok? I really tried to implement a tree with pointers a
 ### [Day 8](https://github.com/RuneDominik/AoC2022/blob/main/src/fauna/trees.rs):
 Solved both parts by recursion. Bit of code-doubling (one function for each direction) but works. Although because of recursion and testing each and every tree this might not scale too good.
 
-### [Day 9](https://github.com/RuneDominik/AoC2022/blob/main/src/surroundings/brigde.rs):
+### [Day 9](https://github.com/RuneDominik/AoC2022/blob/main/src/surroundings/bridge.rs):
 I felt like doing some object-oriented stuff today, so I did. This is of course not needed here and storing every visited point as a whole object will cause overhead and all, bit at least I was able to implement it. Turns out my part one solution cannot be extend for part two that easily. Since I couldn't allocate the necessary time on my to-do heap needed to rewrite this, I skipped part two for now.
 
 ## Please note:
