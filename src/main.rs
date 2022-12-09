@@ -2,6 +2,7 @@ mod helloworld;
 mod elf;
 mod comms;
 mod fauna;
+mod surroundings;
 
 use crate::helloworld::io;
 use crate::elf::calories;
@@ -10,6 +11,7 @@ use crate::elf::rucksacks;
 use crate::elf::cleanup;
 use crate::comms::msg;
 use crate::fauna::trees;
+use crate::surroundings::bridge;
 
 fn main() {
     println!("=================== Day 0 ===================");
@@ -63,6 +65,8 @@ fn main() {
     println!("There is a spot with a scenic score of {}.", scenic_score);
 
     println!("=================== Day 9 ===================");
+    let n_visited = bridge::get_n_visited("data/day9_data/data.txt").unwrap();
+    println!("There were {} points visited.", n_visited);
 
     println!("=================== Day 10 ===================");
 

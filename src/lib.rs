@@ -2,6 +2,7 @@ mod helloworld;
 mod elf;
 mod comms;
 mod fauna;
+mod surroundings;
 
 #[cfg(test)]
 mod helloworld_tests {
@@ -109,5 +110,17 @@ mod fauna_tests {
         let scenic_score = trees::get_scenic_score("data/day8_data/test_data.txt").unwrap();
 
         assert_eq!(scenic_score, 8);
+    }
+}
+
+#[cfg(test)]
+mod surroundings_tests {
+    #[test]
+    fn test_bridge() {
+        use crate::surroundings::bridge;
+
+        let n_visible = bridge::get_n_visited("data/day9_data/test_data.txt").unwrap();
+
+        assert_eq!(n_visible, 13);
     }
 }
