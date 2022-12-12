@@ -83,18 +83,28 @@ mod comms_tests {
     
         assert_eq!(n_processed_characters, 26);
     }
-    //#[test]
-    //fn test_dirs() {
-    //    use crate::comms::dirs;
+    /*
+    #[test]
+    fn test_dirs() {
+        use crate::comms::dirs;
 
-    //    let size_at_most = dirs::get_size_at_most("data/day7_data/test_data.txt").unwrap();
+        let size_at_most = dirs::get_size_at_most("data/day7_data/test_data.txt").unwrap();
 
-    //    assert_eq!(size_at_most, 95437);
+        assert_eq!(size_at_most, 95437);
 
-        //let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
-    
-        //assert_eq!(n_processed_characters, 26);
-    //}
+        let n_processed_characters = msg::get_n_processed_characters_msg("data/day6_data/test_data.txt").unwrap();
+        
+        assert_eq!(n_processed_characters, 26);
+    }
+    */
+    #[test]
+    fn test_crt() {
+        use crate::comms::crt;
+
+        let sig_strength = crt::get_sig_strength("data/day10_data/test_data.txt").unwrap();
+
+        assert_eq!(sig_strength, 13140);
+    }
 }
 
 #[cfg(test)]

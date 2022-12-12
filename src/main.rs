@@ -10,6 +10,7 @@ use crate::elf::camp;
 use crate::elf::rucksacks;
 use crate::elf::cleanup;
 use crate::comms::msg;
+use crate::comms::crt;
 use crate::fauna::trees;
 use crate::surroundings::bridge;
 
@@ -69,6 +70,8 @@ fn main() {
     println!("There were {} points visited.", n_visited);
 
     println!("=================== Day 10 ===================");
+    let signal_strength = crt::get_sig_strength("data/day10_data/data.txt").unwrap();
+    println!("The signal strength sum is {}.", signal_strength);
 
     println!("=================== Day 11 ===================");
 
