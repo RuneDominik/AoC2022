@@ -35,5 +35,8 @@ Solved both parts by recursion. Bit of code-doubling (one function for each dire
 ### [Day 9](https://github.com/RuneDominik/AoC2022/blob/main/src/surroundings/bridge.rs):
 I felt like doing some object-oriented stuff today, so I did. This is of course not needed here and storing every visited point as a whole object will cause overhead and all, bit at least I was able to implement it. Turns out my part one solution cannot be extend for part two that easily. Since I couldn't allocate the necessary time on my to-do heap needed to rewrite this, I skipped part two for now.
 
+### [Day 10](https://github.com/RuneDominik/AoC2022/blob/main/src/comms/crt.rs):
+While the whole struct thingy for day 9 seemed needless in retrospect, I think having this solution as a class with (somewhat) defined states and transitions to progress the whole machine through the input cycles made this solution simple. Only the actual drawing is a bit hardcoded and there are a tad to many explicit type-conversions for my taste, but I'm actually happy with this. Especially since I was able to implement this without to much help from the compiler. Some progress, at last.
+
 ## Please note:
 This README contains links to external resources, for whose content I'm neither responsible nor liable. Click at your own risk.
